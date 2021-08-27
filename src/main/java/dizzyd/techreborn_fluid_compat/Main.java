@@ -67,7 +67,7 @@ public class Main implements ModInitializer {
 		LOGGER.debug("Adding wrapper for " + machine.getPos() + " from target: " + list.getTargetSide());
 		Direction dir = list.getSearchDirection();
 		if (dir == null) {
-			LOGGER.info("No search direction at:" + machine.getPos());
+			LOGGER.debug("No search direction at:" + machine.getPos());
 			return;
 		}
 		Direction side = dir.getOpposite();
