@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "id": "techreborn_fluid_compat",
+  "version": "${version}",
+
+  "name": "Tech Reborn Fluid Compatibility for LibBlockAttributes",
+  "description": "",
+  "authors": [
+    "dizzyd"
+  ],
+  "contact": {
+    "homepage": "https://github.com/dizzyd/techreborn_fluid_compat",
+    "sources": "https://github.com/dizzyd/techreborn_fluid_compat"
+  },
+
+  "license": "CC0-1.0",
+
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "dizzyd.techreborn_fluid_compat.Main"
+    ]
+  },
+  "mixins": [
+  ],
+
+  "depends": {
+    "fabricloader": ">=0.11.3",
+    "fabric": "*",
+    "minecraft": "1.17.x",
+    "java": ">=16",
+    "techreborn": ">=5.0.0",
+    "libblockattributes": ">=0.9.0"
+  },
+  "suggests": {}
+}
