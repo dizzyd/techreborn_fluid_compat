@@ -1,6 +1,7 @@
 plugins {
 	id 'fabric-loom' version '0.9-SNAPSHOT'
 	id 'maven-publish'
+	id "com.matthewprenger.cursegradle" version "1.1.2"
 }
 
 sourceCompatibility = JavaVersion.VERSION_16
@@ -86,4 +87,25 @@ publishing {
 			}
 		}
 	}
+}
+
+curseforge {
+	apiKey = System.getenv("CURSEFORGE_API_KEY")
+
+	project {
+		id = "522258"
+		addGameVersion "1.17.1"
+		releaseType = 'alpha'
+		mainArtifact(remapJar) {
+			displayName = "Tech Reborn Fluid Compatibility $project.version"
+		}
+		changelog = "Changes"
+	}
+	options {
+		forgeGradleIntegration = false
+	}
+}
+
+afterEvaluate {
+	tasks.curseforge.dependsOn remapJar
 }
